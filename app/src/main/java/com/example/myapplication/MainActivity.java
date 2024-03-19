@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
     private double convertUnits(String sourceUnit, String destinationUnit, double value) {
         switch (sourceUnit + " to " + destinationUnit) {
-            // Length Conversions
+            // Lengths
             case "Inch to Cm":
                 return value * 2.54;
             case "Foot to Cm":
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
             case "Km to Mile":
                 return value / 1.60934;
 
-            // Weight Conversions
+            // Weights
             case "Pound to Kg":
                 return value * 0.453592;
             case "Ounce to Gram":
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
             case "Kg to Ton":
                 return value / 907.185;
 
-            // Temperature Conversions
+            // Temperatures
             case "Celsius to Fahrenheit":
                 return (value * 1.8) + 32;
             case "Fahrenheit to Celsius":
@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
                 return ((value - 273.15) * 1.8) + 32;
 
             default:
-                runOnUiThread(() -> Toast.makeText(MainActivity.this, "Conversion not supported", Toast.LENGTH_SHORT).show());
+                runOnUiThread(() -> Toast.makeText(MainActivity.this, "This conversion is not supported YET!", Toast.LENGTH_SHORT).show());
                 return 0;
         }
     }
